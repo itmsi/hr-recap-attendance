@@ -1,0 +1,10 @@
+services:
+  absensi-rekap:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - absensi_db:/app/database
+
+volumes:
+  absensi_db:
