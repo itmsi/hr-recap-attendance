@@ -2,10 +2,9 @@ services:
   absensi-rekap:
     build: .
     restart: always
+    environment:
+      DB_PATH: /app/database/absensi.db
     ports:
       - "8501:8501"
     volumes:
-      - absensi_db:/app/database
-
-volumes:
-  absensi_db:
+      - ./database:/app/database
